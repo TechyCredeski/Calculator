@@ -16,7 +16,7 @@
       <div class="screen">
         <input
           type="text"
-          class="border border-slate-300 rounded-md w-60 text-right h-20 shadow-sm focus:outline-none font-bold bg-slate-300 font-body text-slate-950"
+          class="border border-slate-300 rounded-md w-60 text-right text-3xl h-20 shadow-sm focus:outline-none font-bold bg-slate-300 font-body text-slate-950"
           id="display"
           readonly
         />
@@ -26,24 +26,28 @@
           <button
             data-value="AC"
             class="border border-slate-800 shadow-md w-14 h-14 rounded-md my-2 bg-slate-800 hover:bg-slate-700 text-slate-50"
+            onclick="clearDisplay()"
           >
             AC
           </button>
           <button
             data-value="DEL"
             class="border border-red-700 shadow-md w-14 h-14 rounded-md my-2 bg-red-700 text-slate-50 hover:bg-red-600"
+            onclick="deleteN()"
           >
             DEL
           </button>
           <button
             data-value="%"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendPercentage()"
           >
             %
           </button>
           <button
             data-value="/"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendOperator('/')"
           >
             /
           </button>
@@ -53,24 +57,28 @@
           <button
             data-value="7"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendNumber('7')"
           >
             7
           </button>
           <button
             data-value="8"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendNumber('8')"
           >
             8
           </button>
           <button
             data-value="9"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendNumber(9)"
           >
             9
           </button>
           <button
             data-value="*"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendOperator('*')"
           >
             *
           </button>
@@ -80,24 +88,28 @@
           <button
             data-value="4"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendNumber('4')"
           >
             4
           </button>
           <button
             data-value="5"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendNumber('5')"
           >
             5
           </button>
           <button
             data-value="6"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendNumber('6')"
           >
             6
           </button>
           <button
             data-value="-"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendOperator('-')"
           >
             -
           </button>
@@ -107,24 +119,28 @@
           <button
             data-value="1"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendNumber('1')"
           >
             1
           </button>
           <button
             data-value="2"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendNumber('2')"
           >
             2
           </button>
           <button
             data-value="3"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendNumber('3')"
           >
             3
           </button>
           <button
             data-value="+"
             class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+            onclick="appendOperator('+')"
           >
             +
           </button>
@@ -133,28 +149,33 @@
         <button
           data-value="0"
           class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          onclick="appendNumber('0')"
         >
           0
         </button>
         <button
           data-value="00"
           class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          onclick="appendNumber('00')"
         >
           00
         </button>
         <button
           data-value="."
           class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          onclick="appendOperator('.')"
         >
           .
         </button>
         <button
           data-value="="
           class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          onclick="calculateResult()"
         >
           =
         </button>
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>
