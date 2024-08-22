@@ -1,8 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: ["./*.html"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        body: ["Archivo"],
+      },
+    },
     screens: {
       sm: "576px",
       md: "960px",

@@ -3,37 +3,157 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/output.css" rel="stylesheet" />
     <title>Basic calculator</title>
   </head>
-  <body>
-    <div class="themeswitcher"></div>
-    <div class="container">
-      <div class="screen"></div>
-      <div class="buttons">
-        <button data-value="AC">AC</button>
-        <button data-value="DEL">DEL</button>
-        <button data-value="%">%</button>
-        <button data-value="/">/</button>
+  <body
+    class="flex items-center justify-center h-screen bg-slate-700 font-body"
+  >
+    <div
+      class="flex flex-col items-center justify-between content-between bg-slate-950 p-5 rounded-md"
+      id="container"
+    >
+      <div class="screen">
+        <input
+          type="text"
+          class="border border-slate-300 rounded-md w-60 text-right h-20 shadow-sm focus:outline-none font-bold bg-slate-300 font-body text-slate-950"
+          id="display"
+          readonly
+        />
+      </div>
+      <div class="text-slate-950 text-bold text-b flex-col">
+        <div class="flex items-center justify-between">
+          <button
+            data-value="AC"
+            class="border border-slate-800 shadow-md w-14 h-14 rounded-md my-2 bg-slate-800 hover:bg-slate-700 text-slate-50"
+          >
+            AC
+          </button>
+          <button
+            data-value="DEL"
+            class="border border-red-700 shadow-md w-14 h-14 rounded-md my-2 bg-red-700 text-slate-50 hover:bg-red-600"
+          >
+            DEL
+          </button>
+          <button
+            data-value="%"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            %
+          </button>
+          <button
+            data-value="/"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            /
+          </button>
+        </div>
 
-        <button data-value="7">7</button>
-        <button data-value="8">8</button>
-        <button data-value="9">9</button>
-        <button data-value="*">*</button>
+        <div class="flex items-center justify-between">
+          <button
+            data-value="7"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            7
+          </button>
+          <button
+            data-value="8"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            8
+          </button>
+          <button
+            data-value="9"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            9
+          </button>
+          <button
+            data-value="*"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            *
+          </button>
+        </div>
 
-        <button data-value="4">4</button>
-        <button data-value="5">5</button>
-        <button data-value="6">6</button>
-        <button data-value="-">-</button>
+        <div class="flex items-center justify-between">
+          <button
+            data-value="4"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            4
+          </button>
+          <button
+            data-value="5"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            5
+          </button>
+          <button
+            data-value="6"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            6
+          </button>
+          <button
+            data-value="-"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            -
+          </button>
+        </div>
 
-        <button data-value="1">1</button>
-        <button data-value="2">2</button>
-        <button data-value="3">3</button>
-        <button data-value="+">+</button>
+        <div class="flex items-center justify-between">
+          <button
+            data-value="1"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            1
+          </button>
+          <button
+            data-value="2"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            2
+          </button>
+          <button
+            data-value="3"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            3
+          </button>
+          <button
+            data-value="+"
+            class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+          >
+            +
+          </button>
+        </div>
 
-        <button data-value="0">0</button>
-        <button data-value="00">00</button>
-        <button data-value=".">.</button>
-        <button data-value="=">=</button>
+        <button
+          data-value="0"
+          class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+        >
+          0
+        </button>
+        <button
+          data-value="00"
+          class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+        >
+          00
+        </button>
+        <button
+          data-value="."
+          class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+        >
+          .
+        </button>
+        <button
+          data-value="="
+          class="border shadow-md w-14 h-14 rounded-md my-2 bg-slate-200 hover:bg-slate-50"
+        >
+          =
+        </button>
       </div>
     </div>
   </body>
